@@ -1,0 +1,59 @@
+{
+  "name": "@zraylin/vue-image-magnifier",
+  "version": "1.1.0",
+  "description": "A Vue 3 component for image magnification with customizable options",
+  "type": "module",
+  "main": "./dist/vue-image-magnifier.umd.js",
+  "module": "./dist/vue-image-magnifier.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-image-magnifier.es.js",
+      "require": "./dist/vue-image-magnifier.umd.js",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./dist/index.css": "./dist/index.css",
+    "./style": {
+      "types": "./dist/index.css",
+      "default": "./dist/index.css"
+    }
+  },
+  "style": "dist/index.css",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "types/**/*"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && vue-tsc --declaration --emitDeclarationOnly",
+    "prepublishOnly": "npm run build",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "peerDependencies": {
+    "@vue/runtime-core": "^3.5.18",
+    "vue": "^3.5.18"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "terser": "^5.43.1",
+    "typescript": "~5.6.2",
+    "vite": "^5.4.9",
+    "vite-plugin-dts": "^4.5.4",
+    "vitepress": "^2.0.0-alpha.12",
+    "vue-tsc": "^2.1.6"
+  },
+  "author": "zraylin",
+  "keywords": [
+    "vue3",
+    "magnifier",
+    "image-zoom",
+    "component"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
