@@ -31,6 +31,13 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zchengfa/vue-image-magnifier.git"
+  },
   "peerDependencies": {
     "@vue/runtime-core": "^3.5.18",
     "vue": "^3.5.18"
